@@ -1,0 +1,48 @@
+@mixin font-dm() {
+  font-family: "DM Serif Display", serif;
+}
+
+@mixin font-jost() {
+  font-family: "DM Serif Display", serif;
+}
+
+.font-dm {
+  font-family: "DM Serif Display", serif;
+}
+
+.font-jost {
+  font-family: "Jost", sans-serif;
+}
+
+.text-logo {
+  @include font-dm();
+  font-size: 2.5rem;
+  line-height: 125%;
+
+  @media screen and (max-width: 1232px) {
+    font-size: 2.25rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+// text sizes
+.text-body-m {
+  font-size: 1.375rem;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1232px) {
+  .text-body-m {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-body-m {
+    font-size: 1.125rem;
+  }
+}
