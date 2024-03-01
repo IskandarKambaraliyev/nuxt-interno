@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   colorMode: {
     preference: "light",
   },
-  modules: ["@nuxt/ui", "@vueuse/nuxt", "@nuxt/image-edge"],
+  modules: ["@nuxt/ui", "@vueuse/nuxt", "@nuxt/image"],
   css: ["~/assets/css/main.scss"],
   image: {
     format: ["webp"],
