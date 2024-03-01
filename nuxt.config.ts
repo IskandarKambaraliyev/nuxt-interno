@@ -4,6 +4,11 @@ export default defineNuxtConfig({
   colorMode: {
     preference: "light",
   },
-  modules: ["@nuxt/ui", "@vueuse/nuxt", "@nuxt/image"],
-  css: ["~/assets/css/main.scss"]
-})
+  modules: ["@nuxt/ui", "@vueuse/nuxt", "@nuxt/image-edge"],
+  css: ["~/assets/css/main.scss"],
+  image: {
+    format: ["webp"],
+    screens: { md: 768 },
+    domains: ["i.ibb.co"]
+  },
+});

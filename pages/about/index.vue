@@ -3,7 +3,11 @@
 </script>
 
 <template>
-  <SectionMainHero />
+  <div>
+    About page
+  </div>
 </template>
 
-<style></style>
+<style>
+
+</style>

@@ -3,7 +3,11 @@
 </script>
 
 <template>
-  <SectionMainHero />
+  <div>
+    Pricing page
+  </div>
 </template>
 
-<style></style>
+<style>
+
+</style>

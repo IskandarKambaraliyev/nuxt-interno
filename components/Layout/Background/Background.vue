@@ -6,6 +6,7 @@
       <div class="h-full w-[0.0625rem] bg-[#e6e6e6]" />
       <div class="h-full w-[0.0625rem] bg-[#e6e6e6]" />
       <div class="h-full w-[0.0625rem] bg-[#e6e6e6]" />
+      <div class="h-full w-[0.0625rem] bg-[#e6e6e6] max-sm:hidden" />
     </div>
   </div>
 </template>

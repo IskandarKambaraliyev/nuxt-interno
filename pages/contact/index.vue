@@ -3,7 +3,11 @@
 </script>
 
 <template>
-  <SectionMainHero />
+  <div>
+    Contact page
+  </div>
 </template>
 
-<style></style>
+<style>
+
+</style>

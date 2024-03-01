@@ -3,7 +3,11 @@
 </script>
 
 <template>
-  <SectionMainHero />
+  <div>
+    Blog page
+  </div>
 </template>
 
-<style></style>
+<style>
+
+</style>
