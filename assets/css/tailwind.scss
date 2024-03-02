@@ -29,22 +29,65 @@
 }
 
 // text sizes
+
+.text-body-l {
+  font-size: 1.5rem;
+  line-height: 150%;
+  font-weight: 400;
+}
+
 .text-body-m {
   font-size: 1.25rem;
   line-height: 150%;
   font-weight: 400;
 }
 
+.text-body-s {
+  font-size: 1.125rem;
+  line-height: 125%;
+  font-weight: 400;
+}
+
+.text-heading-xl {
+  @include font-dm();
+  font-size: 4rem;
+  line-height: 125%;
+  font-weight: 400;
+}
+
+.text-heading-l {
+  @include font-dm();
+  font-size: 3rem;
+  line-height: 125%;
+  font-weight: 400;
+}
+
 .text-heading-s {
-  font-family: "DM Serif Display", serif;
+  @include font-dm();
   font-size: 1.5rem;
   line-height: 125%;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 1232px) {
+  .text-body-l {
+    font-size: 1.375rem;
+  }
+
   .text-body-m {
     font-size: 1.125rem;
+  }
+
+  .text-body-s {
+    font-size: 1rem;
+  }
+
+  .text-heading-xl {
+    font-size: 3.25rem;
+  }
+
+  .text-heading-l {
+    font-size: 2.5rem;
   }
 
   .text-heading-s {
@@ -53,8 +96,24 @@
 }
 
 @media screen and (max-width: 768px) {
+  .text-body-l {
+    font-size: 1.25rem;
+  }
+
   .text-body-m {
     font-size: 1rem;
+  }
+
+  .text-body-s {
+    font-size: 0.875rem;
+  }
+
+  .text-heading-xl {
+    font-size: 2.5rem;
+  }
+
+  .text-heading-l {
+    font-size: 2.25rem;
   }
 
   .text-heading-s {
