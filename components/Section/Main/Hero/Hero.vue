@@ -5,7 +5,6 @@
 <template>
   <NuxtImg src="https://i.ibb.co/ZzzBShm/hero.png" provider="ipx" format="webp" width="400" />
   <NuxtImg src="/hero.png" provider="ipx" format="webp" width="400" />
-  <NuxtImg :src="heroImg" provider="ipx" format="webp" width="400" />
   <section class="text-dark-500 hero">
     <div
       class="container relative rounded-[3rem] md:rounded-[3.5rem] lg:rounded-[4rem] overflow-hidden"
