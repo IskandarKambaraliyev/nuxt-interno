@@ -3,16 +3,14 @@
 </script>
 
 <template>
-  <div>
+  <section class="my-16">
     <div
       class="container grid grid-cols-1 lg:grid-cols-2 gap-8 relative rounded-[3rem] md:rounded-[5rem] lg:rounded-none max-lg:overflow-hidden"
     >
       <div
         class="flex flex-col items-start relative max-lg:py-16 max-lg:px-8 max-lg:bg-white/80 space-y-8 lg:my-16"
       >
-        <h2 class="text-heading-l text-dark">
-          We Create The Art Of Stylish Living Stylishly
-        </h2>
+        <UiTitle label="We Create The Art Of Stylish Living Stylishly" />
         <p class="text-body-m text-dark-500">
           It is a long established fact that a reader will be distracted by the
           of readable content of a page when lookings at its layouts the points
@@ -57,7 +55,7 @@
         />
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style></style>

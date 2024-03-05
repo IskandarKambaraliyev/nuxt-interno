@@ -8,6 +8,8 @@
     <BaseServicesLink :limit="3" />
   </div>
   <SectionMainAbout />
+  <SectionMainTestimonial />
+  <SectionMainBrands />
 </template>
 
 <style></style>
