@@ -1,94 +1,90 @@
 <script setup>
-const footerLinks = [
-  {
-    title: "Pages",
-    links: [
-      {
-        to: "/about",
-        exact: false,
-        label: "About us",
-      },
-      {
-        to: "/projects",
-        exact: false,
-        label: "Our projects",
-      },
-      {
-        to: "/team",
-        exact: false,
-        label: "Our team",
-      },
-      {
-        to: "/contact",
-        exact: false,
-        label: "Contact us",
-      },
-      {
-        to: "/services",
-        exact: false,
-        label: "services",
-      },
-      {
-        to: "/pricing",
-        exact: false,
-        label: "Pricing",
-      },
-    ],
-  },
-  {
-    title: "Services",
-    links: [
-      {
-        to: "/services/kitchan",
-        exact: true,
-        label: "kitchan",
-      },
-      {
-        to: "/services/living-area",
-        exact: true,
-        label: "Living area",
-      },
-      {
-        to: "/services/bathroom",
-        exact: true,
-        label: "Bathroom",
-      },
-      {
-        to: "/services/dining-hall",
-        exact: true,
-        label: "Dining hall",
-      },
-      {
-        to: "/services/bedroom",
-        exact: true,
-        label: "Bedroom",
-      },
-    ],
-  },
-  {
-    title: "Contact",
-    links: [
-      {
-        to: "https://maps.app.goo.gl/yfcuZ8cCAgddhK9FA",
-        exact: true,
-        label: "55 East Birchwood Ave. Brooklyn, New York 11201",
-        target: "_blank",
-      },
-      {
-        to: "mailto:contact@interno.com",
-        exact: true,
-        label: "contact@interno.com",
-        target: "_blank",
-      },
-      {
-        to: "tel:(123) 456 - 7890",
-        exact: true,
-        label: "(123) 456 - 7890",
-        target: "_blank",
-      },
-    ],
-  },
-];
+  const { t } = useI18n();
+
+  const footerLinks = [
+    {
+      title: "footer.links.pages.title",
+      links: [
+        {
+          to: "/about",
+          exact: false,
+          label: "footer.links.pages.about",
+        },
+        {
+          to: "/projects",
+          exact: false,
+          label: "footer.links.pages.projects",
+        },
+        {
+          to: "/team",
+          exact: false,
+          label: "footer.links.pages.team",
+        },
+        {
+          to: "/contact",
+          exact: false,
+          label: "footer.links.pages.contact",
+        },
+        {
+          to: "/services",
+          exact: false,
+          label: "footer.links.pages.services",
+        },
+        {
+          to: "/pricing",
+          exact: false,
+          label: "footer.links.pages.pricing",
+        },
+      ],
+    },
+    {
+      title: "footer.links.services.title",
+      links: [
+        {
+          to: "/services/kitchan",
+          exact: true,
+          label: "footer.links.services.kitchan",
+        },
+        {
+          to: "/services/living-area",
+          exact: true,
+          label: "footer.links.services.livingArea",
+        },
+        {
+          to: "/services/bathroom",
+          exact: true,
+          label: "footer.links.services.bathroom",
+        },
+        {
+          to: "/services/dining-hall",
+          exact: true,
+          label: "footer.links.services.diningHall",
+        },
+        {
+          to: "/services/bedroom",
+          exact: true,
+          label: "footer.links.services.bedroom",
+        },
+      ],
+    },
+    {
+      title: "footer.links.contact.title",
+      links: [
+        {
+          to: "https://maps.app.goo.gl/yfcuZ8cCAgddhK9FA",
+          exact: true,
+          label: "footer.links.contact.address",
+          target: "_blank",
+        },
+        {
+          to: `tel:${t("footer.links.contact.phone")}`,
+          exact: true,
+          label: "footer.links.contact.phone",
+          target: "_blank",
+        },
+      ],
+    },
+  ];
 </script>
 
 <template>

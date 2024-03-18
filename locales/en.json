@@ -1,0 +1,114 @@
+{
+  "header": {
+    "links": {
+      "home": "Home",
+      "about": "About us",
+      "services": "Services",
+      "projects": "Projects",
+      "blog": "Blog",
+      "contact": "Contact"
+    }
+  },
+  "footer": {
+    "text": "It is a long established fact that a reader will be distracted lookings.",
+    "links": {
+      "pages": {
+        "title": "Pages",
+        "about": "About us",
+        "projects": "Our Projects",
+        "team": "Our Team",
+        "contact": "Contact Us",
+        "services": "Services",
+        "pricing": "Pricing"
+      },
+      "services": {
+        "title": "Services",
+        "kitchan": "Kitchan",
+        "livingArea": "Living area",
+        "bathroom": "Bathroom",
+        "diningHall": "Dining Hall",
+        "bedroom": "Bedroom"
+      },
+      "contact": {
+        "title": "Contact",
+        "address": "55 East Birchwood Ave. Brooklyn, New York 11201",
+        "phone": "(123) 456 - 7890"
+      }
+    }
+  },
+  "copyright": {
+    "text": "Copyright © Interno. Developed by"
+  },
+  "main": {
+    "hero": {
+      "title": "Let Your Home Be Unique",
+      "text": "There are many variations of the passages of lorem Ipsum fromavailable, majority.",
+      "btn": "get started"
+    },
+    "about": {
+      "title": "We Create The Art Of Stylish Living Stylishly",
+      "text": "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.",
+      "link": {
+        "phone": "012345678",
+        "label": "Call Us Anytime"
+      },
+      "btn": "Get free Estimate"
+    },
+    "testimonials": {
+      "title": "What the People Thinks About Us"
+    },
+    "projects": {
+      "title": "Follow Our Projects",
+      "text": "It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points."
+    }
+  },
+  "serviceLinks": {
+    "project": {
+      "title": "Project Plan",
+      "text": "There are many variations of the passages of lorem Ipsum from available, majority.",
+      "link": "Read More"
+    },
+    "interior": {
+      "title": "Interior Work",
+      "text": "There are many variations of the passages of lorem Ipsum from available, majority.",
+      "link": "Read More"
+    },
+    "retail": {
+      "title": "Retail Design",
+      "text": "There are many variations of the passages of lorem Ipsum from available, majority.",
+      "link": "Read More"
+    },
+    "art": {
+      "title": "2d/3d Art Work",
+      "text": "There are many variations of the passages of lorem Ipsum from available, majority.",
+      "link": "Read More"
+    },
+    "interiorWork": {
+      "title": "Interior Work",
+      "text": "There are many variations of the passages of lorem Ipsum from available, majority.",
+      "link": "Read More"
+    },
+    "decoration": {
+      "title": "Decoration Work",
+      "text": "There are many variations of the passages of lorem Ipsum from available, majority.",
+      "link": "Read More"
+    }
+  },
+  "customers": {
+    "experience": {
+      "title": "Years Of Experiance"
+    },
+    "success": {
+      "title": "Success Project"
+    },
+    "active": {
+      "title": "Active Project"
+    },
+    "satisfied": {
+      "title": "Happy Customers"
+    }
+  },
+  "logo": {
+    "label": "Interno"
+  }
+}

@@ -4,12 +4,23 @@ export default defineNuxtConfig({
   colorMode: {
     preference: "light",
   },
-  modules: ["@nuxt/ui", "@vueuse/nuxt", "@nuxt/image"],
+  modules: ["@nuxt/ui", "@vueuse/nuxt", "@nuxt/image", "@nuxtjs/i18n"],
   css: ["~/assets/css/main.scss"],
   image: {
     format: ["webp"],
     screens: { md: 768 },
-    domains: ["i.ibb.co"],
-    provider: "ipx"
+    domains: ["i.ibb.co", "unsplash.com"],
+    provider: "ipx",
+  },
+  i18n: {
+    vueI18n: "./i18n.config.ts",
+    locales: ["en"],
+    defaultLocale: "en",
+    strategy: "prefix_and_default",
+  },
+  nitro: {
+    experimental: {
+      openAPI: true
+    },
   },
 });

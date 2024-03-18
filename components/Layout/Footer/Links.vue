@@ -1,6 +1,8 @@
 <script setup>
   const route = useRoute();
 
+  const { t } = useI18n();
+
   const props = defineProps({
     links: {
       type: Array,
@@ -25,15 +27,15 @@
 <template>
   <div class="flex flex-wrap items-start gap-x-12 gap-y-4">
     <div v-for="(item, index) in props?.links" :key="index">
-      <h5 class="capitalize text-heading-s mb-4">{{ item.title }}</h5>
+      <h5 class="capitalize text-heading-s mb-4">{{ t(item?.title) }}</h5>
       <ul class="space-y-2">
         <li v-for="(link, i) in item?.links" :key="i" class="max-w-[15rem]">
           <NuxtLink
             :to="link?.to"
-            class="capitalize text-body-m transition hover:text-brown"
+            class="text-body-m transition hover:text-brown"
             :class="`${checkActive(link?.to, link?.exact) ? 'text-brown' : ''}`"
           >
-            {{ link?.label }}
+            {{ t(link?.label) }}
           </NuxtLink>
         </li>
       </ul>

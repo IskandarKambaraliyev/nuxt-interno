@@ -9,6 +9,8 @@
   import "swiper/css";
   import "swiper/css/pagination";
 
+  const {t} = useI18n();
+
   const breakpoints = {
     768: {
       slidesPerView: 2,
@@ -22,44 +24,15 @@
 
   const modules = [Pagination, Autoplay];
 
-  const testimonials = [
-    {
-      id: 1,
-      img: img1,
-      text: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.",
-      name: "Natasha Mith",
-      address: "Sydney, Australia",
-    },
-    {
-      id: 2,
-      img: img2,
-      text: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled it to make a type book.",
-      name: "Brunilda Ireneo",
-      address: "New York, USA",
-    },
-    {
-      id: 3,
-      img: img3,
-      text: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.",
-      name: "Willy Patrick",
-      address: "Berlin, Germany",
-    },
-    {
-      id: 4,
-      img: img4,
-      text: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled it to make a type book.",
-      name: "Raymond Galario",
-      address: "Rom, Italy",
-    },
-  ];
+  const { data, error } = await useMyFetch(`/testimonials`);
 </script>
 
 <template>
-  <section class="my-16 testimonials">
+  <section class="section testimonials">
     <div
       class="container py-8 px-4 md:py-10 md:px-8 lg:py-12 rounded-[3rem] md:rounded-[3.5rem] lg:rounded-[4rem] bg-light"
     >
-      <UiTitle label="What the People Thinks About Us" class="text-center" />
+      <UiTitle :label="t('main.testimonials.title')" class="text-center" />
 
       <div class="mt-8">
         <swiper
@@ -74,7 +47,7 @@
           }"
         >
           <swiper-slide
-            v-for="(item, index) in testimonials"
+            v-for="(item, index) in data"
             :key="index"
             class="px-4 py-6 md:px-5 md:py-8 lg:px-6 lg:py-10 bg-white rounded-[1.5rem] md:rounded-[2rem] lg:rounded-[2.5rem] select-none cursor-default"
           >
@@ -82,12 +55,15 @@
               <div
                 class="w-[3.5rem] h-[3.5rem] md:w-[4rem] md:h-[4rem] rounded-full overflow-hidden"
               >
-                <img
-                  width="64"
-                  height="64"
+                <NuxtImg
+                  provider="ipx"
+                  format="webp"
+                  width="4rem"
+                  height="4rem"
                   :src="item?.img"
-                  alt=""
+                  :alt="`Testimonial image - ${item?.name}`"
                   class="w-full h-full object-cover"
+                  :placeholder="[10,10,5,10]"
                 />
               </div>
               <div class="flex flex-col items-start">

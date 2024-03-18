@@ -10,6 +10,8 @@
   <SectionMainAbout />
   <SectionMainTestimonial />
   <SectionMainBrands />
+  <SectionMainProjects />
+  <BaseCustomers />
 </template>
 
 <style></style>

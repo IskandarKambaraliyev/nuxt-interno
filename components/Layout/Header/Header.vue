@@ -1,10 +1,11 @@
 <script setup>
   const route = useRoute();
+  const { t } = useI18n();
 
   // Link lists of the header. Set "exact" property to true if you want to check the exact path. Change the "target" property to "_blank" if you want to open the link in a new tab. You can also add a click event to the link. But keep in mind that if you use click event, the "to" property will be ignored.
   const links = [
     {
-      label: "Home",
+      label: "header.links.home",
       to: "/",
       target: "_self",
       exact: false,
@@ -13,31 +14,31 @@
       // },
     },
     {
-      label: "About us",
+      label: "header.links.about",
       to: "/about",
       target: "_self",
       exact: false,
     },
     {
-      label: "Services",
+      label: "header.links.services",
       to: "/services",
       target: "_self",
       exact: false,
     },
     {
-      label: "Projects",
+      label: "header.links.projects",
       to: "/projects",
       target: "_self",
       exact: false,
     },
     {
-      label: "Blog",
+      label: "header.links.blog",
       to: "/blog",
       target: "_self",
       exact: false,
     },
     {
-      label: "Contact",
+      label: "header.links.contact",
       to: "/contact",
       target: "_self",
       exact: false,
@@ -113,14 +114,16 @@
             @click="item?.click"
             :class="`${checkActive(item?.to, item?.exact) ? 'text-brown' : ''}`"
           >
-            {{ item?.label }}
+            {{ t(item?.label) }}
           </NuxtLink>
         </li>
       </ul>
     </div>
   </header>
   <USlideover v-model="openSidebar" :ui="slideoverUi">
-    <div class="w-full h-[73px] md:h-[78px] flex items-center justify-end p-4 border-b">
+    <div
+      class="w-full h-[73px] md:h-[78px] flex items-center justify-end p-4 border-b"
+    >
       <button class="p-2 flex-center lg:!hidden" @click="toggleSidebar">
         <UIcon name="i-heroicons-x-mark-16-solid w-6 h-6" />
       </button>
@@ -134,7 +137,7 @@
           @click="item?.click"
           :class="`${checkActive(item?.to, item?.exact) ? 'text-brown' : ''}`"
         >
-          {{ item?.label }}
+          {{ t(item?.label) }}
         </NuxtLink>
       </li>
     </ul>

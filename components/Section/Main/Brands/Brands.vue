@@ -19,7 +19,7 @@
 </script>
 
 <template>
-  <section class="my-16 brands">
+  <section class="section brands">
     <div class="container">
       <swiper
         :modules="modules"
@@ -27,6 +27,10 @@
         :slidesPerView="2"
         :spaceBetween="16"
         :loop="true"
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
       >
         <swiper-slide>
           <div class="w-full">
@@ -199,7 +203,7 @@
           </div>
         </swiper-slide>
         <swiper-slide>
-          <div class="w-full">
+          <NuxtLinkLocale to="https://stiv.uz/" class="w-full" target="_blank">
             <svg
               width="8.75rem"
               height="3.4375rem"
@@ -250,7 +254,7 @@
                 </clipPath>
               </defs>
             </svg>
-          </div>
+          </NuxtLinkLocale>
         </swiper-slide>
         <swiper-slide>
           <div class="w-full">

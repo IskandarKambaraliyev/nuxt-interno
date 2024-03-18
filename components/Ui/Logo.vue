@@ -5,6 +5,8 @@
       default: true,
     },
   });
+
+  const { t } = useI18n();
 </script>
 
 <template>
@@ -27,7 +29,12 @@
         />
       </svg>
     </div>
-    <span class="text-logo text-dark" :class="`${props.isLink ? '' : 'select-text'}`">Interno</span>
+    <span
+      class="text-logo text-dark"
+      :class="`${props.isLink ? '' : 'select-text'}`"
+    >
+      {{ t("logo.label") }}
+    </span>
   </NuxtLink>
 </template>
 

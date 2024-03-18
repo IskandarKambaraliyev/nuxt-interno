@@ -1,4 +1,6 @@
 <script setup>
+  const { t } = useI18n();
+
   const props = defineProps({
     limit: {
       type: Number,
@@ -7,50 +9,50 @@
   });
   const serviceLinks = [
     {
-      title: "Project Plan",
-      text: "There are many variations of the passages of lorem Ipsum from available, majority.",
+      title: "serviceLinks.project.title",
+      text: "serviceLinks.project.text",
       link: {
-        label: "Read More",
+        label: "serviceLinks.project.link",
         to: "/services/project-plan",
       },
     },
     {
-      title: "Interior Work",
-      text: "There are many variations of the passages of lorem Ipsum from available, majority.",
+      title: "serviceLinks.interior.title",
+      text: "serviceLinks.interior.text",
       link: {
-        label: "Read More",
+        label: "serviceLinks.interior.link",
         to: "/services/interior-work",
       },
     },
     {
-      title: "Retail Design",
-      text: "There are many variations of the passages of lorem Ipsum from available, majority.",
+      title: "serviceLinks.retail.title",
+      text: "serviceLinks.retail.text",
       link: {
-        label: "Read More",
+        label: "serviceLinks.retail.link",
         to: "/services/retail-design",
       },
     },
     {
-      title: "2d/3d Art Work",
-      text: "There are many variations of the passages of lorem Ipsum from available, majority.",
+      title: "serviceLinks.art.title",
+      text: "serviceLinks.art.text",
       link: {
-        label: "Read More",
+        label: "serviceLinks.art.link",
         to: "/services/2d-3d-art-work",
       },
     },
     {
-      title: "Interior Work",
-      text: "There are many variations of the passages of lorem Ipsum from available, majority.",
+      title: "serviceLinks.interiorWork.title",
+      text: "serviceLinks.interiorWork.text",
       link: {
-        label: "Read More",
+        label: "serviceLinks.interiorWork.link",
         to: "/services/interior-work",
       },
     },
     {
-      title: "Decoration Work",
-      text: "There are many variations of the passages of lorem Ipsum from available, majority.",
+      title: "serviceLinks.decoration.title",
+      text: "serviceLinks.decoration.text",
       link: {
-        label: "Read More",
+        label: "serviceLinks.decoration.link",
         to: "/services/decoration-work",
       },
     },
@@ -69,11 +71,11 @@
         :to="item.link.to"
         class="text-center flex flex-col items-center py-8 px-4 md:py-10 md:px-6 lg:py-12 lg:px-8 rounded-[2rem] md:rounded-[2.5rem] lg:rounded-[3rem] hover:bg-light border border-transparent max-lg:hover:border-light max-lg:border-[#e5e5e5] max-lg:bg-white/10 max-lg:backdrop-blur-sm group transition-all item"
       >
-        <h4 class="text-heading-s text-dark">{{ item.title }}</h4>
+        <h4 class="text-heading-s text-dark">{{ t(item.title )}}</h4>
         <p class="text-body-m text-dark-500 mt-5 mb-8 flex-1">
-          {{ item.text }}
+          {{ t(item.text) }}
         </p>
-        <UiLink :label="item.link.label" />
+        <UiLink :label="t(item.link.label)" />
       </NuxtLink>
     </li>
   </ul>
