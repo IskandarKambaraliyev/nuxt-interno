@@ -14,7 +14,7 @@
 </script>
 
 <template>
-  <NuxtLinkLocale :to="`/projects/${item.slug}`" class="space-y-6 group">
+  <div class="space-y-6 group cursor-pointer">
     <div
       class="w-full aspect-[1/1] overflow-hidden"
       :class="{
@@ -41,7 +41,7 @@
       <div class="space-y-1 flex-1">
         <h5 class="font-dm text-heading-s line-clamp-1">{{ item.title }}</h5>
         <NuxtLinkLocale
-          :to="`/category/${item.category.slug}`"
+          :to="`/projects?category=${item.category.slug}`"
           class="text-dark-500 text-body-m hover:text-brown"
         >
           {{ item.category.title }}
@@ -56,7 +56,7 @@
         />
       </div>
     </div>
-  </NuxtLinkLocale>
+  </div>
 </template>
 
 <style></style>

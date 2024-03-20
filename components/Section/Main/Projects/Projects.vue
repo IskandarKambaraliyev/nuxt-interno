@@ -8,9 +8,18 @@
       message: error.value.message,
     });
   }
+
+  const projectSlug = ref(null);
+
+  const handleOpen = (slug) => {
+    projectSlug.value = slug;
+  };
 </script>
 
 <template>
+  <Transition name="fade-300-blur">
+    <InterceptionProjects v-model="projectSlug" v-if="projectSlug" />
+  </Transition>
   <section class="section">
     <div class="container">
       <div class="flex-center flex-col max-w-[45rem] mx-auto space-y-2">
@@ -28,6 +37,7 @@
           :key="index"
           :item="item"
           :index="index + 1"
+          @click="handleOpen(item?.slug)"
         />
       </div>
     </div>

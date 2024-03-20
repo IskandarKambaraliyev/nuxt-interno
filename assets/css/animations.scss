@@ -1,0 +1,37 @@
+/* Common Fade */
+@keyframes fade-300 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-300-enter-active {
+  animation: fade-300 0.3s ease-in-out;
+}
+
+.fade-300-leave-active {
+  animation: fade-300 0.3s ease-in-out reverse;
+}
+
+/* Common Fade Blur */
+@keyframes fade-300-blur {
+  0% {
+    opacity: 0;
+    backdrop-filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+  }
+}
+
+.fade-300-blur-enter-active {
+  animation: fade-300-blur 0.3s ease-in-out;
+}
+
+.fade-300-blur-leave-active {
+  animation: fade-300-blur 0.3s ease-in-out reverse;
+}

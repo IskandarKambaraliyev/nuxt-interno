@@ -108,7 +108,20 @@
       "title": "Happy Customers"
     }
   },
+  "projects": {
+    "title": "Our Projects",
+    "tabs": {
+      "bathroom": "Bathroom",
+      "bedroom": "Bedroom",
+      "kitchen": "Kitchen",
+      "livingArea": "Living Area"
+    }
+  },
   "logo": {
     "label": "Interno"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "projects": "Projects"
   }
 }

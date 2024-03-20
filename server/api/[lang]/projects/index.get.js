@@ -33,28 +33,14 @@ export default defineEventHandler(async (event) => {
   // Apply pagination with handling for last page and remaining projects
   const totalProjects = filteredProjects.length;
   const totalPages = Math.ceil(totalProjects / limit);
-  const remainingProjects = totalProjects % limit; // Calculate remaining projects
+  
+  // Corrected logic to handle pagination
+  const adjustedPage = Math.max(1, Math.min(page, totalPages)); // Ensure page is within valid range
+  const startIndex = (adjustedPage - 1) * limit; // Calculate start index based on page and limit
+  const endIndex = Math.min(startIndex + limit, totalProjects); // Calculate end index
 
-  // Adjust page and limit for the last page scenario
-  const adjustedPage = Math.min(page, totalPages); // Ensure page doesn't exceed total pages
-  const adjustedLimit =
-    remainingProjects && adjustedPage === totalPages
-      ? remainingProjects
-      : limit; // Adjust limit for last page with remaining projects
-
-  const startIndex = (adjustedPage - 1) * adjustedLimit;
-  const endIndex = Math.min(
-    parseInt(startIndex) + parseInt(adjustedLimit),
-    parseInt(totalProjects)
-  );
-
-  // Manual pagination
-  const paginatedProjects = [];
-  for (let i = startIndex; i < endIndex && i < totalProjects; i++) {
-    // Include only specific fields in the response
-    const { id, title, category, slug, image, pinned } = filteredProjects[i];
-    paginatedProjects.push({ id, title, category, slug, image, pinned });
-  }
+  // Get the projects for the current page
+  const paginatedProjects = filteredProjects.slice(startIndex, endIndex);
 
   // Calculate next and previous page information
   const hasNextPage = adjustedPage < totalPages;
@@ -62,20 +48,13 @@ export default defineEventHandler(async (event) => {
   const hasPrevPage = adjustedPage > 1;
   const prevPage = hasPrevPage ? adjustedPage - 1 : null;
 
-  if (page > totalPages) {
-    throw createError({
-      statusCode: 404,
-      message: "Page not found"
-    });
-  }
-
   // Return the paginated and filtered projects with pagination info
   return {
     projects: paginatedProjects,
     pagination: {
       total: totalProjects,
-      page: adjustedPage, // Use adjusted page for accurate information
-      limit: parseInt(adjustedLimit), // Use adjusted limit for accurate information
+      page: adjustedPage,
+      limit: limit,
       totalPages,
       hasNextPage,
       nextPage,

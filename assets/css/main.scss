@@ -1,9 +1,11 @@
 @import url("./tailwind.scss");
+@import url("./animations.scss");
 @import url("../fonts/Jost/stylesheet.css");
 @import url("../fonts/DM_Serif_Display/stylesheet.css");
 
 body {
   font-family: "Jost", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .container {
