@@ -18,9 +18,12 @@
 </script>
 
 <template>
-  <div class="group flex flex-col gap-4">
+  <div class="group flex flex-col gap-4 cursor-pointer">
     <div class="w-full h-auto max-h-[40rem] overflow-hidden">
-      <div v-if="loading" class="w-full aspect-[16/9] bg-light rounded-md"></div>
+      <div
+        v-if="loading"
+        class="w-full aspect-[16/9] bg-light rounded-md"
+      ></div>
       <NuxtImg
         sizes="100vw md:50vw"
         :src="item.image"

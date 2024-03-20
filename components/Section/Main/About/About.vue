@@ -46,6 +46,7 @@
         class="max-lg:absolute z-[-1] max-lg:inset-0 lg:max-h-[40rem] overflow-hidden lg:rounded-none lg:rounded-tr-[50%] lg:rounded-bl-[10rem]"
       >
         <NuxtImg
+          format="webp"
           width="37.5rem"
           height="40rem"
           src="https://i.ibb.co/JB03FWK/about.png"

@@ -26,6 +26,7 @@
     () => route.query.category,
     (newVal) => {
       currentCategory.value = newVal;
+      console.log(newVal)
     }
   );
 

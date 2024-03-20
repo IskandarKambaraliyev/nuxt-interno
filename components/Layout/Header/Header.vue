@@ -97,7 +97,7 @@
 
 <template>
   <header
-    class="text-dark py-4 lg:py-8 sticky top-0 left-0 w-full z-[40] transition-all border-b border-transparent"
+    class="text-dark py-4 lg:py-6 sticky top-0 left-0 w-full z-[40] transition-all border-b border-transparent"
     :class="{ 'bg-white/80 backdrop-blur border-white': isSticky }"
   >
     <div class="container flex items-center justify-between">

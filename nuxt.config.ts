@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   image: {
     format: ["webp"],
     screens: { md: 768 },
-    domains: ["i.ibb.co", "unsplash.com"],
+    domains: ["i.ibb.co", "unsplash.com", "images.unsplash.com"],
     provider: "ipx",
   },
   i18n: {

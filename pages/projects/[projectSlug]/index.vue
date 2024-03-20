@@ -26,7 +26,7 @@
     },
     {
       label: t("breadcrumbs.projects"),
-      to: "/projects",
+      to: "/projects?category=bathroom&page=1",
     },
     {
       label: data.value?.title,

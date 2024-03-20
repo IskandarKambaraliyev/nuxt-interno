@@ -115,6 +115,14 @@
       "bedroom": "Bedroom",
       "kitchen": "Kitchen",
       "livingArea": "Living Area"
+    },
+    "detail": {
+      "info": {
+        "client": "Client",
+        "category": "Category",
+        "tags": "Tags",
+        "date": "Date"
+      }
     }
   },
   "logo": {
