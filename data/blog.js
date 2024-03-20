@@ -30,6 +30,7 @@ const blog = {
       tags: ["tag1", "tag2"],
       image: "https://i.ibb.co/kXsGrKc/kitchen-1.jpg",
       head_image: "https://i.ibb.co/W0QBcR2/head-1.jpg",
+      slug: "kitchen-design-1",
     },
     {
       id: 2,
@@ -45,6 +46,7 @@ const blog = {
       tags: ["tag3", "tag4"],
       image: "https://i.ibb.co/nMcG3xb/living-1.jpg",
       head_image: "https://i.ibb.co/dB6L2Mv/head-2.jpg",
+      slug: "living-design-1",
     },
     {
       id: 3,
@@ -60,6 +62,7 @@ const blog = {
       tags: ["tag1", "tag4"],
       image: "https://i.ibb.co/Xx17LZt/interior-1.jpg",
       head_image: "https://i.ibb.co/Lpm9XgG/head-3.jpg",
+      slug: "interior-design-1",
     },
     {
       id: 4,
@@ -75,6 +78,7 @@ const blog = {
       tags: ["tag5", "tag6"],
       image: "https://i.ibb.co/mSRshCj/decoration-1.jpg",
       head_image: null,
+      slug: "decoration-1",
     },
     {
       id: 5,
@@ -90,6 +94,7 @@ const blog = {
       tags: ["tag7", "tag8"],
       image: "https://i.ibb.co/SNQcjXx/door-windows-1.jpg",
       head_image: null,
+      slug: "door-windows-1",
     },
     {
       id: 6,
@@ -105,6 +110,7 @@ const blog = {
       tags: ["tag5", "tag8"],
       image: "https://i.ibb.co/j6QWSCf/home-land-1.jpg",
       head_image: null,
+      slug: "home-land-1",
     },
     {
       id: 7,
@@ -120,6 +126,7 @@ const blog = {
       tags: ["tag2", "tag3"],
       image: "https://i.ibb.co/0C7Wn4Q/roof-1.jpg",
       head_image: null,
+      slug: "roof-installation-1",
     },
     {
       id: 8,
@@ -135,6 +142,7 @@ const blog = {
       tags: ["tag4", "tag6"],
       image: "https://i.ibb.co/7YLQpdr/kitchen-2.jpg",
       head_image: null,
+      slug: "kitchen-design-2",
     },
     {
       id: 9,
@@ -150,6 +158,7 @@ const blog = {
       tags: ["tag9", "tag10"],
       image: "https://i.ibb.co/30k4nPL/living-2.jpg",
       head_image: null,
+      slug: "living-design-2",
     },
     {
       id: 10,
@@ -165,6 +174,7 @@ const blog = {
       tags: ["tag10", "tag11"],
       image: "https://i.ibb.co/mXcmp4F/interior-2.jpg",
       head_image: null,
+      slug: "interior-design-2",
     },
     {
       id: 11,
@@ -180,6 +190,7 @@ const blog = {
       tags: ["tag5", "tag10"],
       image: "https://i.ibb.co/cYhN4s0/decoration-2.jpg",
       head_image: null,
+      slug: "decoration-2",
     },
     {
       id: 12,
@@ -195,6 +206,7 @@ const blog = {
       tags: ["tag10", "tag9", "tag11"],
       image: "https://i.ibb.co/NxsRdSP/door-windows-2.jpg",
       head_image: null,
+      slug: "door-windows-2",
     },
     {
       id: 13,
@@ -210,6 +222,7 @@ const blog = {
       tags: ["tag8", "tag13"],
       image: "https://i.ibb.co/vXbDV2g/home-land-2.jpg",
       head_image: null,
+      slug: "home-land-2",
     },
     {
       id: 14,
@@ -225,6 +238,7 @@ const blog = {
       tags: ["tag14", "tag64"],
       image: "https://i.ibb.co/m9F1FyG/roof-2.jpg",
       head_image: null,
+      slug: "roof-installation-2",
     },
     {
       id: 15,
@@ -240,6 +254,7 @@ const blog = {
       tags: ["tag8", "tag20"],
       image: "https://i.ibb.co/sbk3Mtx/kitchen-3.jpg",
       head_image: null,
+      slug: "kitchen-design-3",
     },
     {
       id: 16,
@@ -255,6 +270,7 @@ const blog = {
       tags: ["tag16"],
       image: "https://i.ibb.co/PxzzThs/living-3.jpg",
       head_image: null,
+      slug: "living-design-3",
     },
     {
       id: 17,
@@ -270,6 +286,7 @@ const blog = {
       tags: ["tag17", "tag67"],
       image: "https://i.ibb.co/brphJ3k/interior-3.jpg",
       head_image: null,
+      slug: "interior-design-3",
     },
     {
       id: 18,
@@ -285,6 +302,7 @@ const blog = {
       tags: ["tag18", "tag68"],
       image: "https://i.ibb.co/brphJ3k/interior-3.jpg",
       head_image: null,
+      slug: "decoration-3",
     },
     {
       id: 19,
@@ -300,6 +318,7 @@ const blog = {
       tags: ["tag19", "tag69"],
       image: "https://i.ibb.co/pJ8B6NW/door-windows-3.jpg",
       head_image: null,
+      slug: "door-windows-3",
     },
     {
       id: 20,
@@ -315,6 +334,7 @@ const blog = {
       tags: ["tag20", "tag70"],
       image: "https://i.ibb.co/sWNHfB3/home-land-3.jpg",
       head_image: null,
+      slug: "home-land-3",
     },
     {
       id: 21,
@@ -330,6 +350,7 @@ const blog = {
       tags: ["tag21", "tag71"],
       image: "https://i.ibb.co/7QhcSkk/roof-3.jpg",
       head_image: null,
+      slug: "roof-installation-3",
     },
     {
       id: 22,
@@ -345,6 +366,7 @@ const blog = {
       tags: ["tag21", "tag22"],
       image: "https://i.ibb.co/SNG93WW/kitchen-4.jpg",
       head_image: null,
+      slug: "kitchen-design-4",
     },
     {
       id: 23,
@@ -360,6 +382,7 @@ const blog = {
       tags: ["tag23"],
       image: "https://i.ibb.co/HNVLH24/living-4.jpg",
       head_image: null,
+      slug: "living-design-4",
     },
     {
       id: 24,
@@ -375,6 +398,7 @@ const blog = {
       tags: ["tag24", "tag74"],
       image: "https://i.ibb.co/cw1xCCb/interior-4.jpg",
       head_image: null,
+      slug: "interior-design-4",
     },
     {
       id: 25,
@@ -390,6 +414,7 @@ const blog = {
       tags: ["tag25", "tag75"],
       image: "https://i.ibb.co/M52CCzT/decoration-4.jpg",
       head_image: null,
+      slug: "decoration-4",
     },
     {
       id: 26,
@@ -405,6 +430,7 @@ const blog = {
       tags: ["tag26", "tag76"],
       image: "https://i.ibb.co/sK7Zj1F/door-windows-4.jpg",
       head_image: null,
+      slug: "door-windows-4",
     },
     {
       id: 27,
@@ -420,6 +446,7 @@ const blog = {
       tags: ["tag27", "tag77"],
       image: "https://i.ibb.co/FsVshxj/home-land-4.jpg",
       head_image: null,
+      slug: "home-land-4",
     },
     {
       id: 28,
@@ -435,6 +462,7 @@ const blog = {
       tags: ["tag28", "tag78"],
       image: "https://i.ibb.co/GMYrgj1/roof-4.jpg",
       head_image: null,
+      slug: "roof-installation-4",
     },
     {
       id: 29,
@@ -450,6 +478,7 @@ const blog = {
       tags: ["tag18", "tag24"],
       image: "https://i.ibb.co/yYHBfD5/kitchen-5.jpg",
       head_image: null,
+      slug: "kitchen-design-5",
     },
     {
       id: 30,
@@ -465,6 +494,7 @@ const blog = {
       tags: ["tag30", "tag80"],
       image: "https://i.ibb.co/D9mQy8C/living-5.jpg",
       head_image: null,
+      slug: "living-design-5",
     },
     {
       id: 31,
@@ -480,6 +510,7 @@ const blog = {
       tags: ["tag31", "tag81"],
       image: "https://i.ibb.co/9wNyhwW/interior-5.jpg",
       head_image: null,
+      slug: "interior-design-5",
     },
     {
       id: 32,
@@ -495,6 +526,7 @@ const blog = {
       tags: ["tag32", "tag82"],
       image: "https://i.ibb.co/7GY7JtY/decoration-5.jpg",
       head_image: null,
+      slug: "decoration-5",
     },
     {
       id: 33,
@@ -510,6 +542,7 @@ const blog = {
       tags: ["tag33", "tag83"],
       image: "https://i.ibb.co/0YmMVqZ/door-windows-5.jpg",
       head_image: null,
+      slug: "door-windows-5",
     },
     {
       id: 34,
@@ -525,6 +558,7 @@ const blog = {
       tags: ["tag34", "tag84"],
       image: "https://i.ibb.co/JcXPk6N/home-land-5.jpg",
       head_image: null,
+      slug: "home-land-5",
     },
     {
       id: 35,
@@ -540,6 +574,7 @@ const blog = {
       tags: ["tag35", "tag85"],
       image: "https://i.ibb.co/PMb3jc3/roof-5.jpg",
       head_image: null,
+      slug: "roof-installation-5",
     },
     {
       id: 36,
@@ -555,6 +590,7 @@ const blog = {
       tags: ["tag36", "tag37"],
       image: "https://i.ibb.co/PzpwYgk/kitchen-6.jpg",
       head_image: null,
+      slug: "kitchen-design-6",
     },
     {
       id: 37,
@@ -570,6 +606,7 @@ const blog = {
       tags: ["tag37", "tag87"],
       image: "https://i.ibb.co/3YvK6BH/living-6.jpg",
       head_image: null,
+      slug: "living-design-6",
     },
     {
       id: 38,
@@ -585,6 +622,7 @@ const blog = {
       tags: ["tag38", "tag88"],
       image: "https://i.ibb.co/ysRXdwX/interior-6.jpg",
       head_image: null,
+      slug: "interior-design-6",
     },
     {
       id: 39,
@@ -600,6 +638,7 @@ const blog = {
       tags: ["tag39", "tag89"],
       image: "https://i.ibb.co/H7KCykW/decoration-6.jpg",
       head_image: null,
+      slug: "decoration-6",
     },
     {
       id: 40,
@@ -615,6 +654,7 @@ const blog = {
       tags: ["tag40", "tag90"],
       image: "https://i.ibb.co/VWGxRK3/door-windows-6.jpg",
       head_image: null,
+      slug: "door-windows-6",
     },
     {
       id: 41,
@@ -630,6 +670,7 @@ const blog = {
       tags: ["tag41", "tag91"],
       image: "https://i.ibb.co/yFBx9YJ/home-land-6.jpg",
       head_image: null,
+      slug: "home-land-6",
     },
     {
       id: 42,
@@ -645,6 +686,7 @@ const blog = {
       tags: ["tag42", "tag92"],
       image: "https://i.ibb.co/SXHS2Vk/roof-6.jpg",
       head_image: null,
+      slug: "roof-installation-6",
     },
     {
       id: 43,
@@ -660,6 +702,7 @@ const blog = {
       tags: ["tag43"],
       image: "https://i.ibb.co/ZJc9WQs/kitchen-7.jpg",
       head_image: null,
+      slug: "kitchen-design-7",
     },
     {
       id: 44,
@@ -675,6 +718,7 @@ const blog = {
       tags: ["tag44", "tag94"],
       image: "https://i.ibb.co/2dRLbY6/living-7.jpg",
       head_image: null,
+      slug: "living-design-7",
     },
     {
       id: 45,
@@ -690,6 +734,7 @@ const blog = {
       tags: ["tag45", "tag95"],
       image: "https://i.ibb.co/4VRJSLg/interior-7.jpg",
       head_image: null,
+      slug: "interior-design-7",
     },
     {
       id: 46,
@@ -705,6 +750,7 @@ const blog = {
       tags: ["tag46", "tag96"],
       image: "https://i.ibb.co/7tN9sNZ/decoration-7.jpg",
       head_image: null,
+      slug: "decoration-7",
     },
     {
       id: 47,
@@ -720,6 +766,7 @@ const blog = {
       tags: ["tag47", "tag97"],
       image: "https://i.ibb.co/8Np7BBv/door-windows-7.jpg",
       head_image: null,
+      slug: "door-windows-7",
     },
     {
       id: 48,
@@ -735,6 +782,7 @@ const blog = {
       tags: ["tag48", "tag98"],
       image: "https://i.ibb.co/0QYKk0n/home-land-7.jpg",
       head_image: null,
+      slug: "home-land-7",
     },
     {
       id: 49,
@@ -750,6 +798,7 @@ const blog = {
       tags: ["tag49", "tag99"],
       image: "https://i.ibb.co/yP0nRcH/roof-7.jpg",
       head_image: null,
+      slug: "roof-installation-7",
     },
   ],
 };
