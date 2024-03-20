@@ -40,7 +40,7 @@
 
 <template>
   <ul
-    class="max-w-max w-full flex-wrap flex-center max-md:gap-x-4 max-md:gap-y-2 md:border border-brown rounded-[1.25rem] mx-auto"
+    class="max-w-max w-full flex-wrap flex-center max-md:gap-x-4 max-md:gap-y-2 md:border border-brown rounded-[1.25rem] mx-auto md:overflow-hidden"
   >
     <li
       v-for="(item, index) in tabCategories"

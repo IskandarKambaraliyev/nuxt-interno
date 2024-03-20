@@ -1,4 +1,6 @@
 <script setup>
+const route = useRoute();
+const router = useRouter();
   const props = defineProps({
     modelValue: {
       type: String,
@@ -42,6 +44,10 @@
   useSeoMeta({
     title: data.value.title,
   });
+
+  watch(() => route.fullPath, () => {
+    handlePopstate();
+  })
 </script>
 
 <template>

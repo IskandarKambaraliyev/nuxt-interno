@@ -11,7 +11,7 @@
           label: "footer.links.pages.about",
         },
         {
-          to: "/projects",
+          to: "/projects?category=bathroom&page=1",
           exact: false,
           label: "footer.links.pages.projects",
         },

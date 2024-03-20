@@ -27,9 +27,10 @@
     },
     {
       label: "header.links.projects",
-      to: "/projects",
+      to: "/projects?category=bathroom&page=1",
       target: "_self",
       exact: false,
+      active: "/projects",
     },
     {
       label: "header.links.blog",
@@ -112,7 +113,11 @@
             :target="item?.target"
             class="text-body-m p-2 hover:text-brown transition cursor-pointer capitalize"
             @click="item?.click"
-            :class="`${checkActive(item?.to, item?.exact) ? 'text-brown' : ''}`"
+            :class="`${
+              checkActive(item.active ? item.active : item?.to, item?.exact)
+                ? 'text-brown'
+                : ''
+            }`"
           >
             {{ t(item?.label) }}
           </NuxtLink>

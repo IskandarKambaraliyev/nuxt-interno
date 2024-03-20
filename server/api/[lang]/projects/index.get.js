@@ -48,6 +48,13 @@ export default defineEventHandler(async (event) => {
   const hasPrevPage = adjustedPage > 1;
   const prevPage = hasPrevPage ? adjustedPage - 1 : null;
 
+  if(page > totalPages) {
+    throw createError({
+      statusCode: 404,
+      message: "Page not found"
+    });
+  }
+
   // Return the paginated and filtered projects with pagination info
   return {
     projects: paginatedProjects,

@@ -2,6 +2,7 @@
   const { t, locale } = useI18n();
 
   const route = useRoute();
+  const router = useRouter();
 
   if (
     route.query.category !== "bathroom" &&
@@ -17,9 +18,9 @@
     });
   }
 
-  const currentCategory = ref(route.query.category);
+  const currentCategory = ref(route.query.category || "bathroom");
 
-  const currentPage = ref(route.query.page);
+  const currentPage = ref(route.query.page || 1);
 
   watch(
     () => route.query.category,
@@ -39,6 +40,13 @@
     () =>
       `/api/${locale.value}/projects/?page=${currentPage.value}&category=${currentCategory.value}`
   );
+
+  if (error.value) {
+    throw createError({
+      statusCode: error.value.statusCode,
+      message: error.value.message,
+    });
+  }
 </script>
 
 <template>

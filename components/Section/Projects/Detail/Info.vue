@@ -35,7 +35,7 @@
         <li v-for="(item, index) in data.tags" :key="index" class="item">
           <span>,&nbsp;</span>
           <NuxtLinkLocale
-            :to="`/projects/?tag=${item}`"
+            :to="`/tag/${item}`"
             class="hover:underline select-text"
           >
             {{ item }}
