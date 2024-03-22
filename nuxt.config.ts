@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.scss"],
   image: {
     format: ["webp"],
-    screens: { md: 768 },
+    screens: { md: 768, lg: 1232 },
     domains: ["i.ibb.co", "unsplash.com", "images.unsplash.com"],
     provider: "ipx",
   },

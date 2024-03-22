@@ -1,4 +1,5 @@
 <script setup>
+  const { t } = useI18n();
   const route = useRoute();
   const router = useRouter();
   const props = defineProps({
@@ -10,6 +11,8 @@
 
   const emit = defineEmits(["update:modelValue"]);
 
+  const loading = ref(true);
+
   const handleClose = () => {
     emit("update:modelValue", null);
     window.history.back();
@@ -20,7 +23,8 @@
   };
 
   onMounted(() => {
-    window.history.pushState({}, "", `/projects/${props.modelValue}`);
+    window.history.pushState({}, "", `/blog/${props.modelValue}`);
+    loading.value = true;
 
     // Listen for the popstate event
     window.addEventListener("popstate", handlePopstate);
@@ -33,7 +37,7 @@
     document.body.style.overflow = "auto";
   });
 
-  const { data, error } = await useMyFetch(`/projects/${props.modelValue}`);
+  const { data, error } = await useMyFetch(`/blogs/${props.modelValue}`);
 
   if (error.value) {
     throw createError({
@@ -43,10 +47,10 @@
   }
 
   useSeoMeta({
-    title: `${data.value.title} - Interno`,
-    ogTitle: `${data.value.title} - Interno`,
-    twitterTitle: `${data.value.title} - Interno`,
-    ogImage: data.value.image,
+    title: `${data.value.blog.title} - Interno`,
+    ogTitle: `${data.value.blog.title} - Interno`,
+    twitterTitle: `${data.value.blog.title} - Interno`,
+    ogImage: data.value.blog.image,
   });
 
   watch(
@@ -55,30 +59,14 @@
       handlePopstate();
     }
   );
+
+  const handleLoad = () => {
+    loading.value = false;
+  };
 </script>
 
 <template>
   <UiModalInterception @close="handleClose">
-    <div class="flex max-lg:flex-col-reverse items-start gap-x-8 gap-y-4 mb-20">
-      <SectionProjectsDetailInfo :data="data" :intercepted="true" />
-      <SectionProjectsDetail :data="data" :intercepted="true" class="flex-1" />
-    </div>
-    <BaseImage
-      :src="data.image"
-      :large="data.image_large ? data.image_large : data.image"
-    />
+    <SectionBlogDetailContent :data="data" />
   </UiModalInterception>
 </template>
-
-<style lang="scss" scoped>
-  .project {
-    max-width: 73rem;
-    width: calc(100% - 10rem);
-    overflow-y: auto;
-
-    @media screen and (max-width: 767px) {
-      width: calc(100% - 2rem);
-      padding: 1rem;
-    }
-  }
-</style>

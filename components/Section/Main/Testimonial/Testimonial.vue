@@ -9,7 +9,7 @@
   import "swiper/css";
   import "swiper/css/pagination";
 
-  const {t} = useI18n();
+  const { t } = useI18n();
 
   const breakpoints = {
     768: {
@@ -56,14 +56,15 @@
                 class="w-[3.5rem] h-[3.5rem] md:w-[4rem] md:h-[4rem] rounded-full overflow-hidden"
               >
                 <NuxtImg
+                  loading="lazy"
                   provider="ipx"
                   format="webp"
-                  width="4rem"
-                  height="4rem"
+                  width="64"
+                  height="64"
                   :src="item?.img"
                   :alt="`Testimonial image - ${item?.name}`"
                   class="w-full h-full object-cover"
-                  :placeholder="[10,10,5,10]"
+                  :placeholder="[10, 10, 5, 10]"
                 />
               </div>
               <div class="flex flex-col items-start">

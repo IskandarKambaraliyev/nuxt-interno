@@ -12,6 +12,13 @@
     `/projects/${route.params.projectSlug}`
   );
 
+  useSeoMeta({
+    title: `${data.value.title} - Interno`,
+    ogTitle: `${data.value.title} - Interno`,
+    twitterTitle: `${data.value.title} - Interno`,
+    ogImage: data.value.image,
+  });
+
   if (error.value) {
     throw createError({
       statusCode: error.value.statusCode,

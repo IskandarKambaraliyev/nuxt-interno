@@ -12,6 +12,7 @@
   <SectionMainBrands />
   <SectionMainProjects />
   <BaseCustomers />
+  <SectionMainBlogs />
 </template>
 
 <style></style>

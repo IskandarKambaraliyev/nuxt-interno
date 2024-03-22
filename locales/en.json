@@ -60,6 +60,10 @@
     "projects": {
       "title": "Follow Our Projects",
       "text": "It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points."
+    },
+    "blogs": {
+      "title": "Articles & News",
+      "text": "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using."
     }
   },
   "serviceLinks": {
@@ -131,5 +135,8 @@
   "breadcrumbs": {
     "home": "Home",
     "projects": "Projects"
-  }
+  },
+  "tags": "Tags",
+  "title": "Interno - Interior Design",
+  "description": "Interior Design blog and portfolio, Developed by Takhirjanovich (stiv.uz)"
 }
