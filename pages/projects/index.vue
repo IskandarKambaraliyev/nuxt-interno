@@ -26,7 +26,7 @@
     () => route.query.category,
     (newVal) => {
       currentCategory.value = newVal;
-      console.log(newVal)
+      console.log(newVal);
     }
   );
 
@@ -48,6 +48,13 @@
       message: error.value.message,
     });
   }
+
+  useSeoMeta({
+    title: t("ogProjects"),
+    ogTitle: t("ogProjects"),
+    twitterTitle: t("ogProjects"),
+    ogImage: "/og-projects.png",
+  });
 </script>
 
 <template>
