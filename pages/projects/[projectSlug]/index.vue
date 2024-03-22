@@ -17,7 +17,12 @@
     ogTitle: `${data.value.title} - Interno`,
     twitterTitle: `${data.value.title} - Interno`,
     ogImage: data.value.image,
+    articleTag: data.value.tags,
   });
+
+  useHead({
+    li
+  })
 
   if (error.value) {
     throw createError({
