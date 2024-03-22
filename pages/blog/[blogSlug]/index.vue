@@ -10,6 +10,8 @@
     ogTitle: `${data.value.blog.title} - Interno`,
     twitterTitle: `${data.value.blog.title} - Interno`,
     ogImage: data.value.blog.image,
+    articleAuthor: "Interno",
+    articleTag: data.value.blog.tags
   });
 
   onMounted(() => {
