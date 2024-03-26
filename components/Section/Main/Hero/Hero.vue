@@ -11,7 +11,7 @@
       class="container relative rounded-[3rem] md:rounded-[3.5rem] lg:rounded-[4rem] overflow-hidden"
     >
       <div class="absolute inset-0">
-        <NuxtImg
+        <!-- <NuxtImg
           preload
           src="/hero.png"
           provider="ipx"
@@ -20,8 +20,8 @@
           class="w-full h-full object-cover select-none"
           :placeholder="[60, 40, 5, 10]"
           alt="Hero image"
-        />
-        <!-- <NuxtImg
+        /> -->
+        <NuxtImg
           preload
           src="https://i.ibb.co/f4CBk6t/hero.png"
           provider="ipx"
@@ -29,7 +29,7 @@
           sizes="1200px"
           class="w-full h-full object-cover select-none"
           :placeholder="[60, 40, 5, 10]"
-        /> -->
+        />
       </div>
       <div
         class="relative content min-h-[70svh] p-4 md:p-8 lg:p-12 flex flex-col justify-center items-start space-y-5 max-w-[32rem]"
