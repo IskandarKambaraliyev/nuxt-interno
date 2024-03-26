@@ -1,4 +1,4 @@
-import blog from '~/data/blog';
+import blog from "~/data/blog";
 
 // Define the API handler
 export default defineEventHandler(async (event) => {
@@ -9,18 +9,18 @@ export default defineEventHandler(async (event) => {
   if (!blog.hasOwnProperty(lang)) {
     throw createError({
       statusCode: 400,
-      message: "Invalid language provided"
+      message: "Invalid language provided",
     });
   }
 
   // Collect all categories from all blog posts
-  const allCategories = blog[lang].map(post => post.category);
+  const allCategories = blog[lang].map((post) => post.category);
 
   // Filter out duplicate categories
-  const possibleCategories = allCategories.filter((category, index, self) =>
-    index === self.findIndex((c) => (
-      c.id === category.id && c.slug === category.slug
-    ))
+  const possibleCategories = allCategories.filter(
+    (category, index, self) =>
+      index ===
+      self.findIndex((c) => c.id === category.id && c.slug === category.slug)
   );
 
   // Filtering blog posts based on query parameters
@@ -28,17 +28,21 @@ export default defineEventHandler(async (event) => {
 
   // Filter by category
   if (category) {
-    filteredBlog = filteredBlog.filter(post => post.category.slug === category);
+    filteredBlog = filteredBlog.filter(
+      (post) => post.category.slug === category
+    );
   }
 
   // Filter by tag
   if (tag) {
-    filteredBlog = filteredBlog.filter(post => post.tags.includes(tag));
+    filteredBlog = filteredBlog.filter((post) => post.tags.includes(tag));
   }
 
   // Filter by search query (search by title)
   if (search) {
-    filteredBlog = filteredBlog.filter(post => post.title.toLowerCase().includes(search.toLowerCase()));
+    filteredBlog = filteredBlog.filter((post) =>
+      post.title.toLowerCase().includes(search.toLowerCase())
+    );
   }
 
   // Apply pagination
@@ -46,20 +50,22 @@ export default defineEventHandler(async (event) => {
   const totalPages = Math.ceil(totalPosts / limit);
   const startIndex = (page - 1) * limit;
   const endIndex = Math.min(startIndex + limit, totalPosts);
-  const paginatedBlog = filteredBlog.slice(startIndex, endIndex);
+  const paginatedBlog = search
+    ? filteredBlog
+    : filteredBlog.slice(startIndex, endIndex);
 
-  if(page > totalPages) {
-    throw createError({
-      statusCode: 404,
-      message: "Page not found"
-    });
-  }
+    if(page > totalPages && !search) {
+      throw createError({
+        statusCode: 404,
+        message: "Page not found"
+      });
+    }
 
   // Prepare response data
   const response = {
     blogs: paginatedBlog,
     categories: possibleCategories,
-    tags: [...new Set(filteredBlog.flatMap(post => post.tags))],
+    tags: [...new Set(filteredBlog.flatMap((post) => post.tags))],
     pagination: {
       total: totalPosts,
       page: page,

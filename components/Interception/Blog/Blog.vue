@@ -67,6 +67,6 @@
 
 <template>
   <UiModalInterception @close="handleClose">
-    <SectionBlogDetailContent :data="data" />
+    <SectionBlogDetailContent :data="data" :interception="true" />
   </UiModalInterception>
 </template>

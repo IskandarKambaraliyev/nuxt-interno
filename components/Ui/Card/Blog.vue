@@ -22,7 +22,7 @@
 <template>
   <div
     class="rounded-[2rem] md:rounded-[2.5rem] lg:rounded-[3rem] border border-light cursor-pointer p-4 lg:p-5 flex flex-col gap-4 lg:gap-5 select-none bg-white transition duration-300 ease-in-out group"
-    :class="{'hover:bg-light': !loading}"
+    :class="{ 'hover:bg-light': !loading }"
   >
     <div
       v-if="item.image"
@@ -56,7 +56,9 @@
       <h4 class="text-heading-s line-clamp-3 text-dark">{{ item.title }}</h4>
 
       <div class="flex items-center justify-between flex-wrap">
-        <span class="text-base text-dark-500">{{ item.date }}</span>
+        <span class="text-base text-dark-500">
+          {{ dateFormatter(item.date) }}
+        </span>
 
         <div
           class="size-12 rounded-full bg-light flex-center text-dark group-hover:bg-white transition duration-300 ease-in-out"

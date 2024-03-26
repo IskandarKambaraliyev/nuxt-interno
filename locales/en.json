@@ -136,6 +136,12 @@
     "home": "Home",
     "projects": "Projects"
   },
+  "blog": {
+    "latest": "Latest News",
+    "categories": "Categories",
+    "tags": "Tags",
+    "search": "Search articles & news"
+  },
   "tags": "Tags",
   "title": "Interno - Interior Design",
   "description": "Interior Design blog and portfolio, Developed by Takhirjanovich (stiv.uz)",

@@ -69,6 +69,13 @@
   font-weight: 400;
 }
 
+.text-heading-xs {
+  @include font-dm();
+  font-size: 1.125rem;
+  line-height: 125%;
+  font-weight: 400;
+}
+
 @media screen and (max-width: 1232px) {
   .text-body-l {
     font-size: 1.375rem;
@@ -92,6 +99,10 @@
 
   .text-heading-s {
     font-size: 1.25rem;
+  }
+
+  .text-heading-xs {
+    font-size: 1rem;
   }
 }
 
@@ -118,5 +129,9 @@
 
   .text-heading-s {
     font-size: 1.125rem;
+  }
+
+  .text-heading-xs {
+    font-size: 1rem;
   }
 }

@@ -5,13 +5,17 @@
       type: Object,
       required: true,
     },
+    interception: {
+      type: Boolean,
+      required: false,
+    },
   });
 </script>
 
 <template>
   <h4 class="text-heading-l">{{ data.blog.title }}</h4>
   <div class="w-full flex items-center justify-between flex-wrap gap-4">
-    <span class="text-base text-dark-500">{{ data.blog.date }}</span>
+    <span class="text-base text-dark-500">{{ dateFormatter(data.blog.date) }}</span>
     <NuxtLinkLocale
       :to="`/blog?category=${data.blog.category.slug}&page=1`"
       class="text-base text-dark-500 hover:underline select-text"
@@ -58,7 +62,7 @@
         {{ item }}
       </NuxtLinkLocale>
     </div>
-    <SectionBlogDetailShare :title="data.blog.title" />
+    <SectionBlogDetailShare :title="data.blog.title" :slug="data.blog.slug" :interception="props.interception" />
   </div>
 </template>
 

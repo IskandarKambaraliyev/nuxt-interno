@@ -6,11 +6,25 @@
       type: String,
       required: true,
     },
+    slug: {
+      type: String,
+      required: true,
+    },
+    interception: {
+      type: Boolean,
+      required: false,
+    },
   });
 
   const url = ref(null);
 
-  onMounted(() => (url.value = window.location.href));
+  onMounted(() => {
+    if (props.interception) {
+      url.value = `${window.location.origin}/${locale.value}/blog/${props.slug}`;
+    } else {
+      url.value = window.location.href;
+    }
+  });
 
   const { copy, copied } = useClipboard();
 
@@ -38,10 +52,26 @@
 
 <template>
   <div class="flex items-center gap-8">
-    <SectionBlogDetailShareButton icon="i-bxl-telegram" @click="shareOnTelegram" />
-    <SectionBlogDetailShareButton icon="i-bxl-facebook" @click="shareOnFacebook" />
-    <SectionBlogDetailShareButton icon="i-ri-twitter-x-line" @click="shareOnTwitter" />
-    <SectionBlogDetailShareButton :icon="copied ? 'i-heroicons-clipboard-document-check-16-solid' : 'i-heroicons-clipboard-16-solid'" @click="copy(url)" />
+    <SectionBlogDetailShareButton
+      icon="i-bxl-telegram"
+      @click="shareOnTelegram"
+    />
+    <SectionBlogDetailShareButton
+      icon="i-bxl-facebook"
+      @click="shareOnFacebook"
+    />
+    <SectionBlogDetailShareButton
+      icon="i-ri-twitter-x-line"
+      @click="shareOnTwitter"
+    />
+    <SectionBlogDetailShareButton
+      :icon="
+        copied
+          ? 'i-heroicons-clipboard-document-check-16-solid'
+          : 'i-heroicons-clipboard-16-solid'
+      "
+      @click="copy(url)"
+    />
   </div>
 </template>
 
