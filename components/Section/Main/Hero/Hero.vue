@@ -12,13 +12,22 @@
       <div class="absolute inset-0">
         <NuxtImg
           preload
-          src="https://i.ibb.co/f4CBk6t/hero.png"
+          :src="heroImg"
           provider="ipx"
           format="webp"
           width="1200"
           class="w-full h-full object-cover select-none"
           :placeholder="[60, 40, 5, 10]"
         />
+        <!-- <NuxtImg
+          preload
+          src="https://i.ibb.co/f4CBk6t/hero.png"
+          provider="ipx"
+          format="webp"
+          width="1200"
+          class="w-full h-full object-cover select-none"
+          :placeholder="[60, 40, 5, 10]"
+        /> -->
       </div>
       <div
         class="relative content min-h-[70svh] p-4 md:p-8 lg:p-12 flex flex-col justify-center items-start space-y-5 max-w-[32rem]"
