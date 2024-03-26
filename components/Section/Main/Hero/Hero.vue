@@ -13,7 +13,7 @@
       <div class="absolute inset-0">
         <NuxtImg
           preload
-          src="/main/hero/hero.png"
+          src="/hero.png"
           provider="ipx"
           format="webp"
           sizes="1200px"
