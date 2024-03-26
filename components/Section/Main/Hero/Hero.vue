@@ -1,5 +1,6 @@
 <script setup>
-  import heroImg from "~/assets/images/main/hero/hero.png";
+  import heroImg from "/hero.png";
+  // import heroImg from "~/assets/images/main/hero/hero.png";
 
   const { t } = useI18n();
 </script>
@@ -12,19 +13,20 @@
       <div class="absolute inset-0">
         <NuxtImg
           preload
-          :src="heroImg"
+          src="/main/hero/hero.png"
           provider="ipx"
           format="webp"
-          width="1200"
+          sizes="1200px"
           class="w-full h-full object-cover select-none"
           :placeholder="[60, 40, 5, 10]"
+          alt="Hero image"
         />
         <!-- <NuxtImg
           preload
           src="https://i.ibb.co/f4CBk6t/hero.png"
           provider="ipx"
           format="webp"
-          width="1200"
+          sizes="1200px"
           class="w-full h-full object-cover select-none"
           :placeholder="[60, 40, 5, 10]"
         /> -->

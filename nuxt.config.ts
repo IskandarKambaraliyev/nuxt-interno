@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     screens: { xs: 320, sm: 640, md: 768, lg: 1232 },
     domains: ["i.ibb.co", "unsplash.com", "images.unsplash.com"],
     provider: "ipx",
+    dir: "assets/images"
   },
   i18n: {
     vueI18n: "./i18n.config.ts",
