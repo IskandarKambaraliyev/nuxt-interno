@@ -67,5 +67,9 @@
     width: 100%;
     overflow: hidden;
     border-radius: 0.5rem;
+
+    &:hover {
+      visibility: visible;
+    }
   }
 </style>
