@@ -12,6 +12,7 @@
   "dependencies": {
     "@vueuse/nuxt": "^10.9.0",
     "nuxt": "^3.10.3",
+    "string-similarity": "^4.0.4",
     "swiper": "^11.0.7",
     "v-viewer": "^3.0.13",
     "viewerjs": "^1.11.6",

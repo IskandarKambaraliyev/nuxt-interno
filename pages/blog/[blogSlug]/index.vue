@@ -26,9 +26,28 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     }, 300);
   });
+
+  const breadcrumb = [
+    {
+      to: "/",
+      label: t("breadcrumbs.home"),
+    },
+    {
+      to: "/blog",
+      label: t("breadcrumbs.blog"),
+    },
+    {
+      label: data.value.blog.title,
+    },
+  ];
 </script>
 
 <template>
+  <BaseHead
+    :title="data.blog?.title"
+    :img="data.blog?.image"
+    :links="breadcrumb"
+  />
   <section class="section" v-if="data">
     <div class="container grid grid-cols-1 lg:grid-cols-3 gap-20 lg:gap-12">
       <div class="lg:col-span-2">

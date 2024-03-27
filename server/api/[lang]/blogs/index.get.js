@@ -1,3 +1,4 @@
+import stringSimilarity from "string-similarity";
 import blog from "~/data/blog";
 
 // Define the API handler
@@ -13,18 +14,42 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  // Collect all categories from all blog posts
-  const allCategories = blog[lang].map((post) => post.category);
+  // Helper function to perform smart search
+  const smartSearch = (data, searchTerm) => {
+    return data.filter((post) => {
+      const title = post.title.toLowerCase();
+      const categorySlug = post.category.slug.toLowerCase();
 
-  // Filter out duplicate categories
-  const possibleCategories = allCategories.filter(
-    (category, index, self) =>
-      index ===
-      self.findIndex((c) => c.id === category.id && c.slug === category.slug)
-  );
+      // Calculate similarity score for title and category slug
+      const titleSimilarity = stringSimilarity.compareTwoStrings(
+        searchTerm,
+        title
+      );
+      const categorySimilarity = stringSimilarity.compareTwoStrings(
+        searchTerm,
+        categorySlug
+      );
+
+      // If either the title or category has a similarity score above a certain threshold, consider it a match
+      const threshold =
+        searchTerm.length === 1
+          ? 0.1
+          : searchTerm.length === 2
+          ? 0.2
+          : searchTerm.length === 3
+          ? 0.3
+          : 0.4;
+      return titleSimilarity > threshold || categorySimilarity > threshold;
+    });
+  };
 
   // Filtering blog posts based on query parameters
   let filteredBlog = blog[lang];
+
+  // Smart search
+  if (search) {
+    filteredBlog = smartSearch(filteredBlog, search.toLowerCase());
+  }
 
   // Filter by category
   if (category) {
@@ -38,13 +63,6 @@ export default defineEventHandler(async (event) => {
     filteredBlog = filteredBlog.filter((post) => post.tags.includes(tag));
   }
 
-  // Filter by search query (search by title)
-  if (search) {
-    filteredBlog = filteredBlog.filter((post) =>
-      post.title.toLowerCase().includes(search.toLowerCase())
-    );
-  }
-
   // Apply pagination
   const totalPosts = filteredBlog.length;
   const totalPages = Math.ceil(totalPosts / limit);
@@ -54,12 +72,22 @@ export default defineEventHandler(async (event) => {
     ? filteredBlog
     : filteredBlog.slice(startIndex, endIndex);
 
-    if(page > totalPages && !search) {
-      throw createError({
-        statusCode: 404,
-        message: "Page not found"
-      });
-    }
+  if (page > totalPages && !search) {
+    throw createError({
+      statusCode: 404,
+      message: "Page not found",
+    });
+  }
+
+  // Collect all categories from filtered blog posts
+  const allCategories = filteredBlog.map((post) => post.category);
+
+  // Filter out duplicate categories
+  const possibleCategories = allCategories.filter(
+    (category, index, self) =>
+      index ===
+      self.findIndex((c) => c.id === category.id && c.slug === category.slug)
+  );
 
   // Prepare response data
   const response = {
@@ -68,14 +96,15 @@ export default defineEventHandler(async (event) => {
     tags: [...new Set(filteredBlog.flatMap((post) => post.tags))],
     pagination: {
       total: totalPosts,
-      page: page,
-      limit: limit,
-      totalPages: totalPages,
-      hasPrevPage: page > 1,
-      hasNextPage: endIndex < totalPosts,
-      prevPage: page > 1 ? page - 1 : null,
-      nextPage: endIndex < totalPosts ? page + 1 : null,
+      page: search ? 1 : page,
+      limit: search ? totalPosts : limit,
+      totalPages: search ? 1 : totalPages,
+      hasPrevPage: search ? false : page > 1,
+      hasNextPage: search ? false : endIndex < totalPosts,
+      prevPage: search ? null : page > 1 ? page - 1 : null,
+      nextPage: search ? null : endIndex < totalPosts ? page + 1 : null,
     },
+    latest: filteredBlog[0]
   };
 
   // Return the response

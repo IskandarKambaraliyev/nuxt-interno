@@ -134,7 +134,12 @@
   },
   "breadcrumbs": {
     "home": "Home",
-    "projects": "Projects"
+    "projects": "Projects",
+    "blog": "Blog"
+  },
+  "blogs": {
+    "title": "Articles & News",
+    "latest": "Latest Post"
   },
   "blog": {
     "latest": "Latest News",

@@ -20,10 +20,6 @@
     articleTag: data.value.tags,
   });
 
-  useHead({
-    li
-  })
-
   if (error.value) {
     throw createError({
       statusCode: error.value.statusCode,

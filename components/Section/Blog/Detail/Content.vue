@@ -16,12 +16,11 @@
   <h4 class="text-heading-l">{{ data.blog.title }}</h4>
   <div class="w-full flex items-center justify-between flex-wrap gap-4">
     <span class="text-base text-dark-500">{{ dateFormatter(data.blog.date) }}</span>
-    <NuxtLinkLocale
-      :to="`/blog?category=${data.blog.category.slug}&page=1`"
-      class="text-base text-dark-500 hover:underline select-text"
+    <span
+      class="text-base text-dark-500"
     >
       {{ data.blog.category.title }}
-    </NuxtLinkLocale>
+    </span>
   </div>
   <div class="w-full aspect-[16/9] rounded-lg overflow-hidden my-4">
     <div class="w-full h-full bg-light animate-pulse" v-if="loading"></div>

@@ -30,7 +30,7 @@
 
     <Transition name="fade-300">
       <ul v-if="data && search" class="result">
-        <li v-for="(item, index) in data.blogs" :key="index">
+        <li v-for="(item, index) in data.blogs.slice(0, 10)" :key="index">
           <NuxtLinkLocale
             :to="`/blog/${item?.slug}`"
             class="py-2 px-4 flex items-center justify-between flex-wrap gap-x-4 gap-y-1 group"

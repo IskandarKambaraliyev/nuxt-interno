@@ -12,7 +12,7 @@
   <div class="space-y-8 md:space-y-10 lg:space-y-12">
     <SectionBlogDetailSidebarSearch />
     <SectionBlogDetailSidebarLatest :data="props.data.latestBlogs" />
-    <SectionBlogDetailSidebarCategories :data="props.data.categories" />
+    <!-- <SectionBlogDetailSidebarCategories :data="props.data.categories" /> -->
     <SectionBlogDetailSidebarTags :data="props.data.tags" />
   </div>
 </template>
