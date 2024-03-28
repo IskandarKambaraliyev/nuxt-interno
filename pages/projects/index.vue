@@ -72,7 +72,7 @@
 
       <SectionProjects :data="data" />
 
-      <SectionProjectsPagination :data="data.pagination" />
+      <BasePagination :data="data.pagination" />
     </div>
   </div>
 </template>

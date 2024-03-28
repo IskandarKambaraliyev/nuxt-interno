@@ -33,6 +33,7 @@
       :placeholder="[10, 5, 5, 10]"
       class="w-full h-full object-cover object-center select-none"
       @load="handleLoad"
+      :preload="true"
     />
     <Transition name="fade-300">
       <div

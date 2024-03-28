@@ -96,13 +96,13 @@ export default defineEventHandler(async (event) => {
     tags: [...new Set(filteredBlog.flatMap((post) => post.tags))],
     pagination: {
       total: totalPosts,
-      page: search ? 1 : page,
+      page: search ? 1 : parseInt(page),
       limit: search ? totalPosts : limit,
       totalPages: search ? 1 : totalPages,
       hasPrevPage: search ? false : page > 1,
       hasNextPage: search ? false : endIndex < totalPosts,
-      prevPage: search ? null : page > 1 ? page - 1 : null,
-      nextPage: search ? null : endIndex < totalPosts ? page + 1 : null,
+      prevPage: search ? null : page > 1 ? parseInt(page) - 1 : null,
+      nextPage: search ? null : endIndex < totalPosts ? parseInt(page) + 1 : null,
     },
     latest: filteredBlog[0]
   };

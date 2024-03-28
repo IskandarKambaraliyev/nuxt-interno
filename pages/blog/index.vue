@@ -12,6 +12,13 @@
 
   const page = ref(route.query.page || 1);
 
+  watch(
+    () => route.query.page,
+    () => {
+      page.value = route.query.page || 1;
+    }
+  );
+
   const { data, error } = await useFetch(
     () => `/api/${locale.value}/blogs?page=${page.value}`
   );
@@ -46,6 +53,7 @@
       <BaseBlogs :data="data" />
     </div>
   </section>
+  <BasePagination :data="data.pagination" />
 </template>
 
 <style></style>
