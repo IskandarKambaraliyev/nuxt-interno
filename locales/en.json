@@ -129,13 +129,33 @@
       }
     }
   },
+  "about": {
+    "quote": {
+      "text": "I like an interior that defies labeling. I don't really want someone to walk into a room and know that I did it",
+      "author": "BUNNY WILLIAMS"
+    },
+    "main": {
+      "services": {
+        "title": "What We Do",
+        "text": "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.",
+        "link": "Our Concept"
+      },
+      "projects": {
+        "title": "The End Result",
+        "text": "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.",
+        "link": "Our Portfolio"
+      }
+    }
+  },
+  "team": "Our Team Members",
   "logo": {
     "label": "Interno"
   },
   "breadcrumbs": {
     "home": "Home",
     "projects": "Projects",
-    "blog": "Blog"
+    "blog": "Blog",
+    "about": "About Us"
   },
   "blogs": {
     "title": "Articles & News",

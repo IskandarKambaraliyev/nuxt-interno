@@ -1,4 +1,5 @@
 <script setup>
+  const { t } = useI18n();
   const props = defineProps({
     label: {
       type: String,
@@ -29,7 +30,7 @@
     }`"
   >
     <span class="text-white text-body-s !font-semibold">
-      {{ props?.label }}
+      {{ t(props?.label) }}
     </span>
     <div
       class="transition-all w-4 group-hover:w-6 md:group-hover:w-7 md:w-5 flex justify-end"

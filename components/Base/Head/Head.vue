@@ -41,12 +41,12 @@
         v-if="(props.title || props.links) && loaded"
       >
         <h1 v-if="props.title" class="text-heading-l text-center">
-          {{ props?.title }}
+          {{ t(props?.title) }}
         </h1>
         <ul v-if="props.links" class="flex-center flex-wrap">
           <li v-for="(item, index) in props.links" :key="index">
             <span :class="{ hidden: index === 0 }" class="text-body-m">
-              &nbsp;/&nbsp;
+              &nbsp;/
             </span>
             <NuxtLinkLocale
               :to="item?.to"
