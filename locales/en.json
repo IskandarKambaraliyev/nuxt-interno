@@ -148,6 +148,18 @@
     }
   },
   "team": "Our Team Members",
+  "teamMember": {
+    "bio": {
+      "title": "Short Biography​",
+      "functionality": "Simplicity and Functionality",
+      "qa": "Qustion And Answer",
+      "skills": {
+        "design": "Project Design",
+        "management": "Team Management",
+        "client": "Client Satisfaction"
+      }
+    }
+  },
   "logo": {
     "label": "Interno"
   },
@@ -155,7 +167,9 @@
     "home": "Home",
     "projects": "Projects",
     "blog": "Blog",
-    "about": "About Us"
+    "about": "About Us",
+    "team": "Team",
+    "teamMember": "Team Member"
   },
   "blogs": {
     "title": "Articles & News",

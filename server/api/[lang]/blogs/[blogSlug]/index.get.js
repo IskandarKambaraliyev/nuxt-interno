@@ -1,4 +1,4 @@
-import blog from "~/data/blog";
+import blog from "~/data/blog.js";
 
 // Define the API handler
 export default defineEventHandler(async (event) => {

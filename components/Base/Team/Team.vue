@@ -48,6 +48,7 @@
           :autoplay="{
             delay: 5000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }"
         >
           <swiper-slide
@@ -71,9 +72,12 @@
               class="absolute inset-0 bg-white flex flex-col items-center justify-evenly text-center p-4 gap-8 scale-105 opacity-0 group-hover:opacity-100 group-hover:scale-100 invisible group-hover:visible transition-all duration-500 ease-in-out"
             >
               <div class="flex flex-col">
-                <span class="text-heading-s line-clamp-2 text-dark">
+                <NuxtLinkLocale
+                  :to="`/team/${item.id}`"
+                  class="text-heading-s line-clamp-2 text-dark"
+                >
                   {{ item?.name }}
-                </span>
+                </NuxtLinkLocale>
                 <span class="truncate text-base text-dark-500">
                   {{ item?.position }}
                 </span>
