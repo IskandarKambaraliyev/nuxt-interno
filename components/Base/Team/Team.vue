@@ -57,12 +57,10 @@
             class="aspect-[3/4] relative rounded-[1.5rem] md:rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden group select-none"
           >
             <NuxtLinkLocale class="w-full h-full" :to="`/team/${item.id}`">
-              <NuxtImg
+              <img
                 width="296"
                 height="394"
-                format="webp"
                 :src="item?.image"
-                :placeholder="[9, 12, 5, 10]"
                 class="w-full h-full object-cover"
                 :alt="`Member - ${item?.name}`"
               />

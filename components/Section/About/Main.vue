@@ -34,12 +34,11 @@
         <div
           class="w-full md:w-1/2 lg:w-[55%] aspect-[16/9] rounded-[2rem] mdrounded-[2.5rem] lg:rounded-[3rem] overflow-hidden"
         >
-          <NuxtImg
+          <img
             width="677"
             height="381"
             :src="item?.img"
             class="w-full h-full object-cover"
-            :placeholder="[16, 9, 5, 10]"
           />
         </div>
         <div class="flex-1">

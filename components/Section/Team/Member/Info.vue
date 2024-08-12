@@ -12,13 +12,11 @@
 <template>
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
     <div class="w-full h-auto">
-      <NuxtImg
-        format="webp"
+      <img
         width="590"
         height="786"
         :src="data?.image"
         class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem]"
-        :placeholder="[30, 40, 5, 10]"
       />
     </div>
     <div class="col-span-1 md:col-span-2 flex flex-col justify-center gap-6">

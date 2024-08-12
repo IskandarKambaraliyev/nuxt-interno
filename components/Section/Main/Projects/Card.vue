@@ -28,12 +28,10 @@
           props.index === 4,
       }"
     >
-      <NuxtImg
-        format="webp"
+      <img
         width="35.5rem"
         height="35.5rem"
         :src="item.image"
-        :placeholder="[10, 10, 5, 10]"
         class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300 ease-in-out"
       />
     </div>

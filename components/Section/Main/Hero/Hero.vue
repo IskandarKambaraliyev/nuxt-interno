@@ -21,14 +21,9 @@
           :placeholder="[60, 40, 5, 10]"
           alt="Hero image"
         /> -->
-        <NuxtImg
-          preload
+        <img
           src="https://i.ibb.co/f4CBk6t/hero.png"
-          provider="ipx"
-          format="webp"
-          sizes="1200px"
           class="w-full h-full object-cover select-none"
-          :placeholder="[60, 40, 5, 10]"
         />
       </div>
       <div

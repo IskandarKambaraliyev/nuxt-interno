@@ -45,14 +45,11 @@
       <div
         class="max-lg:absolute z-[-1] max-lg:inset-0 lg:max-h-[40rem] overflow-hidden lg:rounded-none lg:rounded-tr-[50%] lg:rounded-bl-[10rem]"
       >
-        <NuxtImg
-          format="webp"
+        <img
           width="37.5rem"
           height="40rem"
           src="https://i.ibb.co/JB03FWK/about.png"
-          alt=""
           class="w-full h-full object-cover"
-          :placeholder="[2, 3, 5, 10]"
         />
       </div>
     </div>

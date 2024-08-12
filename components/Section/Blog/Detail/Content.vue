@@ -15,33 +15,28 @@
 <template>
   <h4 class="text-heading-l">{{ data.blog.title }}</h4>
   <div class="w-full flex items-center justify-between flex-wrap gap-4">
-    <span class="text-base text-dark-500">{{ dateFormatter(data.blog.date) }}</span>
-    <span
-      class="text-base text-dark-500"
-    >
+    <span class="text-base text-dark-500">
+      {{ dateFormatter(data.blog.date) }}
+    </span>
+    <span class="text-base text-dark-500">
       {{ data.blog.category.title }}
     </span>
   </div>
   <div class="w-full aspect-[16/9] rounded-lg overflow-hidden my-4">
     <div class="w-full h-full bg-light animate-pulse" v-if="loading"></div>
     <div class="w-full h-full relative flex-center" v-if="data.blog.image">
-      <NuxtImg
+      <img
         width="544"
-        format="306"
-        :placeholder="[16, 9, 5, 10]"
+        height="306"
         :src="data.blog.image"
         class="w-full h-full object-cover absolute"
       />
       <div
         class="absolute bg-black/20 w-full h-full backdrop-blur rounded-lg"
       ></div>
-      <NuxtImg
-        height="612"
-        format="webp"
-        :placeholder="[16, 9, 5, 10]"
+      <img
         :src="data.blog.image"
         class="w-auto h-full object-contain relative"
-        @load="handleLoad"
       />
     </div>
   </div>
@@ -61,7 +56,11 @@
         {{ item }}
       </NuxtLinkLocale>
     </div>
-    <SectionBlogDetailShare :title="data.blog.title" :slug="data.blog.slug" :interception="props.interception" />
+    <SectionBlogDetailShare
+      :title="data.blog.title"
+      :slug="data.blog.slug"
+      :interception="props.interception"
+    />
   </div>
 </template>
 

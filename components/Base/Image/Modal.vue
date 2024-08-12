@@ -17,16 +17,6 @@
   const handleClose = () => {
     emit("update:modelValue", false);
   };
-
-  const loading = ref(false);
-
-  onMounted(() => {
-    loading.value = true;
-  });
-
-  const handleLoaded = () => {
-    loading.value = false;
-  };
 </script>
 
 <template>
@@ -39,18 +29,10 @@
         dynamic
       />
     </button>
-    <UIcon
-      name="i-svg-spinners-bars-rotate-fade"
-      class="size-8 text-white"
-      dynamic
-      v-if="loading"
-    />
-    <NuxtImg
+    <img
       :src="props.src"
-      :placeholder="[5, 5, 5, 10]"
       format="webp"
       class="max-w-full max-h-full relative"
-      @load="handleLoaded"
     />
   </div>
 </template>

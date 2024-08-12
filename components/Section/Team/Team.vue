@@ -12,12 +12,10 @@
       >
         <div v-for="(item, index) in data" :key="index" class="space-y-4">
           <NuxtLinkLocale :to="`/team/${item.id}`" class="w-full h-auto">
-            <NuxtImg
-              format="webp"
+            <img
               width="300"
               height="400"
               :src="item.image"
-              :placeholder="[15, 20, 10, 10]"
               class="w-full rounded-[1rem] md:rounded-[1.5rem]"
             />
           </NuxtLinkLocale>

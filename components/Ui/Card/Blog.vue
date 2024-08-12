@@ -28,28 +28,13 @@
       v-if="item.image"
       class="w-full aspect-[1/1] overflow-hidden rounded-t-[1.5rem] md:rounded-t-[2rem] lg:rounded-t-[2.25rem] relative"
     >
-      <div
-        class="w-full h-full bg-light animate-pulse relative z-[1]"
-        v-if="loading"
-      ></div>
-      <NuxtImg
-        format="webp"
+      <img
         width="360"
         height="360"
         :src="item.image"
         :alt="`Blog article - ${item?.title}`"
         class="w-full h-full object-cover group-hover:scale-105 transition duration-300 ease-in-out"
-        :placeholder="[10, 10, 5, 10]"
-        @load="handleLoad"
       />
-      <Transition name="fade-300">
-        <span
-          class="absolute bottom-4 left-4 lg:bottom-5 lg:left-5 p-1 md:p-1.5 lg:p-2 bg-white rounded-lg rounded-bl-none line-clamp-1 shadow-lg"
-          v-if="!loading"
-        >
-          {{ item.category.title }}
-        </span>
-      </Transition>
     </div>
 
     <div class="flex-1 flex flex-col justify-between gap-4 lg:gap-5">
