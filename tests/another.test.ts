@@ -1,5 +1,6 @@
 import { mount } from "@vue/test-utils";
 import _hero from "../components/Section/Main/Hero/Hero.vue";
+import { describe, expect, test } from "vitest";
 
 describe("import vue component", () => {
   test("normal imports as expected", async () => {
