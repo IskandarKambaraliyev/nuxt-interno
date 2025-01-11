@@ -1,8 +1,4 @@
 <script setup>
-  import heroImg from "/hero.png";
-  // import heroImg from "~/assets/images/main/hero/hero.png";
-
-  const { t } = useI18n();
 </script>
 
 <template>
@@ -30,11 +26,14 @@
         class="relative content min-h-[70svh] p-4 md:p-8 lg:p-12 flex flex-col justify-center items-start space-y-5 max-w-[32rem]"
       >
         <h1 class="font-dm text-dark text-heading-xl">
-          {{ t("main.hero.title") }}
+          Let Your Home Be Unique
         </h1>
-        <p class="text-body-m">{{ t("main.hero.text") }}</p>
+        <p class="text-body-m">
+          There are many variations of the passages of lorem Ipsum
+          fromavailable, majority.
+        </p>
         <UiLinkButton
-          :label="t('main.hero.btn')"
+          label="get started"
           to="/services"
           class="capitalize"
           color="dark"
