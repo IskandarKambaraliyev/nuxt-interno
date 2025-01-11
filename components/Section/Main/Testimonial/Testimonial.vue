@@ -44,6 +44,7 @@
           :autoplay="{
             delay: 5000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }"
         >
           <swiper-slide
@@ -55,16 +56,12 @@
               <div
                 class="w-[3.5rem] h-[3.5rem] md:w-[4rem] md:h-[4rem] rounded-full overflow-hidden"
               >
-                <NuxtImg
-                  loading="lazy"
-                  provider="ipx"
-                  format="webp"
+                <img
                   width="64"
                   height="64"
                   :src="item?.img"
                   :alt="`Testimonial image - ${item?.name}`"
                   class="w-full h-full object-cover"
-                  :placeholder="[10, 10, 5, 10]"
                 />
               </div>
               <div class="flex flex-col items-start">

@@ -48,6 +48,7 @@
           :autoplay="{
             delay: 5000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }"
         >
           <swiper-slide
@@ -56,13 +57,11 @@
             class="aspect-[3/4] relative rounded-[1.5rem] md:rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden group select-none"
           >
             <NuxtLinkLocale class="w-full h-full" :to="`/team/${item.id}`">
-              <NuxtImg
+              <img
                 width="296"
                 height="394"
-                format="webp"
                 :src="item?.image"
-                :placeholder="[9, 12, 5, 10]"
-                class="object-cover w-full h-full"
+                class="w-full h-full object-cover"
                 :alt="`Member - ${item?.name}`"
               />
             </NuxtLinkLocale>
@@ -71,10 +70,13 @@
               class="absolute inset-0 flex flex-col items-center invisible gap-8 p-4 text-center transition-all duration-500 ease-in-out scale-105 bg-white opacity-0 justify-evenly group-hover:opacity-100 group-hover:scale-100 group-hover:visible"
             >
               <div class="flex flex-col">
-                <span class="text-heading-s line-clamp-2 text-dark">
+                <NuxtLinkLocale
+                  :to="`/team/${item.id}`"
+                  class="text-heading-s line-clamp-2 text-dark"
+                >
                   {{ item?.name }}
-                </span>
-                <span class="text-base truncate text-dark-500">
+                </NuxtLinkLocale>
+                <span class="truncate text-base text-dark-500">
                   {{ item?.position }}
                 </span>
               </div>

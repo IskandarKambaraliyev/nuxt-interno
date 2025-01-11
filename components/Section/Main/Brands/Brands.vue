@@ -30,6 +30,7 @@
         :autoplay="{
           delay: 3000,
           disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }"
       >
         <swiper-slide>

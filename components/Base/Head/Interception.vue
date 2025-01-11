@@ -17,12 +17,10 @@
 
 <template>
   <div class="w-full h-[12rem] md:h-[17rem] relative" v-if="props.img">
-    <NuxtImg
+    <img
       width="1232"
       height="272"
-      format="webp"
       :src="props?.img"
-      :placeholder="[10, 5, 5, 10]"
       class="w-full h-full object-cover object-center select-none"
     />
     <div

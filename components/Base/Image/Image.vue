@@ -26,12 +26,10 @@
     <div
       class="w-full aspect-[16/9] overflow-hidden rounded-[2rem] md:rounded-[2.5rem] lg:rounded-[3rem] mx-auto relative"
     >
-      <NuxtImg
-        format="webp"
+      <img
         width="533"
         height="300"
         :src="props.src"
-        :placeholder="[5, 5, 5, 10]"
         class="w-full h-full object-cover object-center select-none"
       />
       <button
@@ -46,7 +44,11 @@
       </button>
     </div>
     <Transition name="fade-300">
-      <BaseImageModal v-model="openModal" :src="props.large" v-if="props.large && openModal" />
+      <BaseImageModal
+        v-model="openModal"
+        :src="props.large"
+        v-if="props.large && openModal"
+      />
     </Transition>
   </div>
 </template>

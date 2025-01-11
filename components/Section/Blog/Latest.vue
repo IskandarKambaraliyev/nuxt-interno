@@ -21,18 +21,18 @@
         <div
           class="aspect-[4/3] rounded-[0.75rem] md:rounded-[1.25rem] lg:rounded-[1.75rem] overflow-hidden"
         >
-          <NuxtImg
+          <img
             width="539"
             height="434"
-            format="webp"
-            :placeholder="[24, 18, 5, 10]"
             :src="data.image"
             class="w-full h-full object-cover select-none group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />
         </div>
         <div class="space-y-6 md:space-y-8 flex flex-col justify-center">
           <div class="space-y-4 md:space-y-6">
-            <h5 class="text-heading-s text-dark line-clamp-2">{{ data.title }}</h5>
+            <h5 class="text-heading-s text-dark line-clamp-2">
+              {{ data.title }}
+            </h5>
             <div
               v-html="data.content"
               class="line-clamp-6 text-body-m text-dark-500"

@@ -110,17 +110,17 @@ const team = {
       qa: [
         {
           question: "What is your design process?",
-          answer:
+          description:
             "My design process involves understanding the client's needs and goals, conducting research, creating wireframes, and then developing the final design. I focus on creating designs that are both visually appealing and functional.",
         },
         {
           question: "What tools do you use for design?",
-          answer:
+          description:
             "I use tools such as Adobe Photoshop, Illustrator, and Sketch for design work. I also use InVision for prototyping and gathering feedback from clients.",
         },
         {
           question: "How do you stay updated on design trends?",
-          answer:
+          description:
             "I stay updated on design trends by reading blogs, attending conferences, and following other designers on social media.",
         },
       ],
