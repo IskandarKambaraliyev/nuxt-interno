@@ -36,7 +36,7 @@
 <template>
   <section class="bg-light section">
     <div class="container">
-      <h3 class="text-heading-l text-dark text-center">{{ t("team") }}</h3>
+      <h3 class="text-center text-heading-l text-dark">{{ t("team") }}</h3>
 
       <div class="mt-8">
         <swiper
@@ -62,19 +62,19 @@
                 format="webp"
                 :src="item?.image"
                 :placeholder="[9, 12, 5, 10]"
-                class="w-full h-full object-cover"
+                class="object-cover w-full h-full"
                 :alt="`Member - ${item?.name}`"
               />
             </NuxtLinkLocale>
 
             <div
-              class="absolute inset-0 bg-white flex flex-col items-center justify-evenly text-center p-4 gap-8 scale-105 opacity-0 group-hover:opacity-100 group-hover:scale-100 invisible group-hover:visible transition-all duration-500 ease-in-out"
+              class="absolute inset-0 flex flex-col items-center invisible gap-8 p-4 text-center transition-all duration-500 ease-in-out scale-105 bg-white opacity-0 justify-evenly group-hover:opacity-100 group-hover:scale-100 group-hover:visible"
             >
               <div class="flex flex-col">
                 <span class="text-heading-s line-clamp-2 text-dark">
                   {{ item?.name }}
                 </span>
-                <span class="truncate text-base text-dark-500">
+                <span class="text-base truncate text-dark-500">
                   {{ item?.position }}
                 </span>
               </div>
@@ -86,7 +86,7 @@
                   target="_blank"
                 >
                   <UIcon
-                    class="size-6 text-dark-500 hover:text-brown transition"
+                    class="transition size-6 text-dark-500 hover:text-brown"
                     name="i-bxl-facebook"
                     dynamic
                   />
@@ -97,7 +97,7 @@
                   target="_blank"
                 >
                   <UIcon
-                    class="size-6 text-dark-500 hover:text-brown transition"
+                    class="transition size-6 text-dark-500 hover:text-brown"
                     name="i-bxl-twitter"
                     dynamic
                   />
@@ -108,7 +108,7 @@
                   target="_blank"
                 >
                   <UIcon
-                    class="size-6 text-dark-500 hover:text-brown transition"
+                    class="transition size-6 text-dark-500 hover:text-brown"
                     name="i-bxl-linkedin"
                     dynamic
                   />
@@ -119,7 +119,7 @@
                   target="_blank"
                 >
                   <UIcon
-                    class="size-6 text-dark-500 hover:text-brown transition"
+                    class="transition size-6 text-dark-500 hover:text-brown"
                     name="i-bxl-instagram"
                     dynamic
                   />
@@ -129,14 +129,14 @@
               <div class="flex flex-col">
                 <NuxtLinkLocale
                   :to="`tel:${item.contact.phone}`"
-                  class="text-body-m text-dark-500 hover:text-brown transition"
+                  class="transition text-body-m text-dark-500 hover:text-brown"
                   target="_blank"
                 >
                   {{ item.contact.phone }}
                 </NuxtLinkLocale>
                 <NuxtLinkLocale
                   :to="`mailto:${item.contact.email}`"
-                  class="text-body-m text-dark-500 hover:text-brown transition"
+                  class="transition text-body-m text-dark-500 hover:text-brown"
                   target="_blank"
                 >
                   {{ item.contact.email }}
