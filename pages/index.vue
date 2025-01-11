@@ -3,6 +3,7 @@
 </script>
 
 <template>
+  <p>Hello</p>
   <SectionMainHero />
   <div class="container">
     <BaseServicesLink :limit="3" />
